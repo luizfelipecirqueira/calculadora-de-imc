@@ -1,3 +1,10 @@
+#Calculadora de IMC
+
+Projeto em React + Typescript fazendo uma calculadora de IMC.
+
+Projeto desenvolvido no curso [B7Web]>(https://b7web.com.br)
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
