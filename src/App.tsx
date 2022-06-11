@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import styles from './App.module.css';
 import poweredImage from './assets/powered.png';
+import { levels, calculateIMC } from './helpers/imc';
 
-import {levels, calculateIMC} from './helpers/imc';
 
 const App = () => {
 
@@ -10,10 +10,10 @@ const App = () => {
   const [weightField, setWeightField] = useState<number>(0);
 
   const handleCalculateButton = () => {
-    if(heightField && weightField){
+    if (heightField && weightField) {
       //processo de calcular
     }
-    else{
+    else {
       alert("Digite todos os campos");
     }
   }
@@ -29,7 +29,7 @@ const App = () => {
         <div className={styles.leftSide}>
           <h1>Calcule o seu IMC.</h1>
           <p>IMC é a sigla para Índice de Massa Corpórea, parâmetro adotado pela Organização Mundial da Saúde para calcular o peso ideal de cada pessoa.</p>
-          
+
           <input type="number" placeholder="Digite a sua altura. Ex: 1.5 (em metros)"
             value={heightField > 0 ? heightField : ''}
             onChange={e => setHeightField(parseFloat(e.target.value))}
@@ -42,7 +42,9 @@ const App = () => {
           <button onClick={handleCalculateButton}>Calcular</button>
         </div>
         <div className={styles.rightSide}>
-          ...
+          <div className={styles.grid}>
+             <div>...</div>
+          </div>
         </div>
       </div>
     </div>
